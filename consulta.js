@@ -167,16 +167,16 @@
       /* fallback: nunca perder o lead — segue pelo WhatsApp */
       if (window.fbq) fbq('track', 'Lead');
       const msg = [
-        'Solicitação de consulta privada — vertexdevs.org', '',
+        'Solicitação de conversa · vertexdevs.org', '',
         `Nome: ${answers.nome || '-'}`, `Empresa: ${answers.empresa || '-'}`,
         `Procura: ${answers.busca || '-'}`, `Momento: ${answers.momento || '-'}`,
         `Investimento: ${answers.investimento || '-'}`, `WhatsApp: ${answers.whatsapp || '-'}`, `E-mail: ${answers.email || '-'}`
       ].join('\n');
-      window.open('https://wa.me/554892044331?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      window.open('https://wa.me/5521920509475?text=' + encodeURIComponent(msg), '_blank', 'noopener');
       show(8, 1);
       if (bar) bar.style.width = '100%';
     } finally {
-      if (btn) { btn.disabled = false; btn.textContent = 'Solicitar consulta privada'; }
+      if (btn) { btn.disabled = false; btn.textContent = 'Solicitar conversa'; }
     }
   });
 

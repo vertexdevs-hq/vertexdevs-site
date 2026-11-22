@@ -7,7 +7,7 @@
 
   const SUPABASE_URL = 'https://kmgnjlcmswbbsntwdvef.supabase.co';
   const SUPABASE_KEY = 'sb_publishable_9DJQOz3zsSm4s-WRkv31IA_Gu55pVCQ';
-  const WA = 'https://wa.me/554892044331?text=';
+  const WA = 'https://wa.me/5521920509475?text=';
 
   const val = (n) => (form.elements[n]?.value || '').trim();
 
