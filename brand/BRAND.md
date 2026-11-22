@@ -1,5 +1,3 @@
-> **SUBSTITUÍDO em 22/11/2026.** A marca vigente está em `~/code/vertex/interno/vertex-marca` (repo `vertexdevs-hq/vertex-marca`): "Menos piloto. Mais resultado.", visual claro. Este arquivo fica só como histórico.
-
 # Vertex — Kit de Marca
 
 > Versão 1.0 · 2026-07-04 · Fonte da verdade para toda comunicação da Vertex: site, Instagram, propostas, artes e prompts de imagem.
