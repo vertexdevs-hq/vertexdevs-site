@@ -52,7 +52,6 @@ def planos():
         cards.append(f'''        <article class="plan{' plan--featured' if rec else ''}" data-reveal>
           {flag}
           <h3>{nome}</h3>
-          <div class="plan-price">{preco} <small>{per}</small></div>
           <p class="plan-for">{para}</p>
           <ul>{li}</ul>
         </article>''')
