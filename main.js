@@ -91,7 +91,7 @@
       onEnter: () => gsap.fromTo(el, { innerText: 0 }, {
         innerText: target, duration: 1.8, ease: 'power2.out',
         snap: { innerText: 1 },
-        onUpdate() { el.textContent = Math.round(gsap.getProperty(el, 'innerText')); }
+        onUpdate() { el.textContent = Math.round(gsap.getProperty(el, 'innerText')).toLocaleString('pt-BR'); }
       })
     });
   });
