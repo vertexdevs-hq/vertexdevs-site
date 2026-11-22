@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Cases · Vertex</title>
+  <meta name="description" content="Cases de IA aplicada em financeiro, fiscal, aquisição de clientes, telefonia, WhatsApp e operação. Sem nome de cliente, com o número." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="Cases · Vertex" />
+  <meta property="og:description" content="Cases de IA aplicada em financeiro, fiscal, aquisição de clientes, telefonia, WhatsApp e operação. Sem nome de cliente, com o número." />
+  <meta property="og:image" content="https://vertexdevs.org/assets/og-image.jpg" />
+  <meta property="og:url" content="https://vertexdevs.org/casos.html" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="site.css" />
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1021077700509079');
+    fbq('track', 'PageView');
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+      if (a && window.fbq) fbq('track', 'Contact');
+    }, true);
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+    src="https://www.facebook.com/tr?id=1021077700509079&ev=PageView&noscript=1" /></noscript>
+</head>
+<body>
+  <a class="skip" href="#principal">Pular para o conteúdo</a>
+  <header class="nav"><div class="wrap">
+    <a class="logo" href="index.html" aria-label="Vertex, início">VERTEX</a>
+    <nav class="nav-links" aria-label="Principal"><a href="index.html#areas">Resultados</a><a href="casos.html" aria-current="page">Cases</a><a href="index.html#como">Como funciona</a><a href="index.html#momento">Para quem</a><a class="btn btn-primary btn-sm" href="consulta.html">Agendar conversa</a></nav>
+  </div></header>
+  <main id="principal">
+    <section class="hero" style="padding-bottom:2rem">
+      <div class="wrap">
+        <span class="eyebrow">Cases</span>
+        <h1 class="h1" style="max-width:14ch">Cada projeto, <span class="grad">um número.</span></h1>
+        <p class="lead">Sem nome de cliente. Com o resultado. Filtre pela sua área ou pelo seu momento.</p>
+      </div>
+    </section>
+    <section class="alt" style="padding-top:3rem">
+      <div class="wrap">
+        <div class="filters"><div class="filter-row" id="filter-area"></div><div class="filter-row" id="filter-momento"></div></div>
+        <p class="count" id="cases-count" aria-live="polite"></p>
+        <div class="cases" id="cases-grid"></div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="wrap"><h2 class="h2">O próximo case pode ser o seu.</h2><a class="btn btn-primary" href="consulta.html">Agendar conversa</a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap">
+    <span>© 2026 Vertex · Consultoria de IA aplicada · Brasil e Portugal</span>
+    <nav aria-label="Rodapé"><a href="casos.html">Cases</a><a href="index.html#como">Como funciona</a><a href="consulta.html">Agendar conversa</a><a href="https://www.instagram.com/vertex.devs/" target="_blank" rel="noopener">Instagram</a></nav>
+  </div></footer>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" aria-hidden="true"><div class="sheet-body"></div></div>
+  <script src="casos.js"></script>
+  <script src="site.js"></script>
+  <script src="efeitos.js"></script>
+</body>
+</html>

@@ -2,20 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Agendar conversa · Vertex</title>
-  <meta name="description" content="Agende uma conversa com a Vertex. Acompanhamos poucas empresas por vez; a conversa começa aqui." />
+  <meta name="description" content="Seis perguntas rápidas para a gente entender onde a IA pode dar resultado na sua empresa." />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
   <meta property="og:title" content="Agendar conversa · Vertex" />
-  <meta property="og:description" content="Poucos projetos por vez. A conversa começa aqui." />
+  <meta property="og:description" content="Seis perguntas rápidas para a gente entender onde a IA pode dar resultado na sua empresa." />
   <meta property="og:image" content="https://vertexdevs.org/assets/og-image.jpg" />
   <meta property="og:url" content="https://vertexdevs.org/consulta.html" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="site.css" />
   <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -25,27 +27,22 @@
     document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1021077700509079');
     fbq('track', 'PageView');
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+      if (a && window.fbq) fbq('track', 'Contact');
+    }, true);
   </script>
   <noscript><img height="1" width="1" style="display:none" alt=""
     src="https://www.facebook.com/tr?id=1021077700509079&ev=PageView&noscript=1" /></noscript>
 </head>
-<body class="consulta-page">
-  <a class="skip-link" href="#principal">Pular para o conteúdo</a>
-  <div class="noise" aria-hidden="true"></div>
-
-  <header class="site-header is-scrolled">
-    <nav aria-label="Navegação principal">
-      <a class="wordmark" href="index.html">VERTEX</a>
-      <div class="nav-links">
-        <a href="produtos.html">A Coleção</a>
-        <a href="metodo.html">O Método</a>
-        <a href="estudio.html">O Estúdio</a>
-      </div>
-    </nav>
-  </header>
-
+<body>
+  <a class="skip" href="#principal">Pular para o conteúdo</a>
+  <header class="nav"><div class="wrap">
+    <a class="logo" href="index.html" aria-label="Vertex, início">VERTEX</a>
+    <nav class="nav-links" aria-label="Principal"><a href="index.html#areas">Resultados</a><a href="casos.html">Cases</a><a href="index.html#como">Como funciona</a><a href="index.html#momento">Para quem</a><a class="btn btn-primary btn-sm" href="consulta.html">Agendar conversa</a></nav>
+  </div></header>
   <main id="principal" class="consulta-main">
-    <div class="hero-guilloche" aria-hidden="true"></div>
+    
     <div class="consulta-progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
     <form id="consulta-form" class="consulta-shell" autocomplete="on" novalidate>
@@ -53,8 +50,8 @@
       <!-- 0 · abertura -->
       <section class="c-step is-active" data-step="0">
         <span class="label">Consulta privada</span>
-        <h1 class="c-title">A conversa começa <em>aqui</em>.</h1>
-        <p class="c-sub">Acompanhamos poucas empresas por vez. Seis perguntas nos dizem se a Vertex pode assumir a sua tecnologia. Leva menos de dois minutos.</p>
+        <h1 class="c-title">Vamos achar o seu <em>primeiro resultado</em>.</h1>
+        <p class="c-sub">Seis perguntas. Menos de dois minutos. Saímos daqui sabendo onde a IA pode dar resultado na sua empresa.</p>
         <div class="c-actions">
           <button type="button" class="btn btn-primary" data-next>Começar</button>
           <span class="c-hint">ou pressione <kbd>Enter</kbd></span>
@@ -88,12 +85,12 @@
       <!-- 3 · o que procura -->
       <section class="c-step" data-step="3">
         <span class="c-num">03 <i>/</i> 06</span>
-        <h2 class="c-title">O que mais <em>preocupa</em> hoje?</h2>
+        <h2 class="c-title">Onde dói <em>mais</em> hoje?</h2>
         <div class="c-options" role="radiogroup" aria-label="O que procura">
-          <button type="button" class="c-option" data-value="Tecnologia sem dono: decisões e fornecedores"><i>I.</i> Ninguém responde pela tecnologia</button>
-          <button type="button" class="c-option" data-value="Custo de software e nuvem fora de controle"><i>II.</i> Custo de tecnologia fora de controle</button>
-          <button type="button" class="c-option" data-value="IA e sistemas que precisam ser construídos"><i>III.</i> IA e sistemas que precisam sair do papel</button>
-          <button type="button" class="c-option" data-value="Ainda explorando possibilidades"><i>IV.</i> Ainda estou entendendo</button>
+          <button type="button" class="c-option" data-value="Financeiro e fiscal"><i>I.</i> Financeiro e fiscal</button>
+          <button type="button" class="c-option" data-value="Vendas e aquisição de clientes"><i>II.</i> Vendas e aquisição de clientes</button>
+          <button type="button" class="c-option" data-value="Atendimento, WhatsApp e telefonia"><i>III.</i> Atendimento, WhatsApp e telefonia</button>
+          <button type="button" class="c-option" data-value="Ainda não sei onde começar"><i>IV.</i> Ainda não sei onde começar</button>
         </div>
         <input type="hidden" id="f-busca" name="busca" required />
       </section>
@@ -101,12 +98,12 @@
       <!-- 4 · momento -->
       <section class="c-step" data-step="4">
         <span class="c-num">04 <i>/</i> 06</span>
-        <h2 class="c-title">Em que <em>momento</em> ela está?</h2>
+        <h2 class="c-title">Em que <em>momento</em> a empresa está?</h2>
         <div class="c-options" role="radiogroup" aria-label="Momento da operação">
-          <button type="button" class="c-option" data-value="Operação rodando, com dores claras"><i>I.</i> Rodando, com dores claras</button>
-          <button type="button" class="c-option" data-value="Crescendo e precisando escalar"><i>II.</i> Crescendo, preciso de estrutura</button>
-          <button type="button" class="c-option" data-value="Situação crítica, preciso agir rápido"><i>III.</i> Crítica, preciso agir rápido</button>
-          <button type="button" class="c-option" data-value="Ideia em validação"><i>IV.</i> Ideia em validação</button>
+          <button type="button" class="c-option" data-value="Ideia, ainda do zero"><i>I.</i> Ideia, ainda do zero</button>
+          <button type="button" class="c-option" data-value="Processo rodando, mas caro e manual"><i>II.</i> Processo rodando, mas caro e manual</button>
+          <button type="button" class="c-option" data-value="Time tradicional, sem IA"><i>III.</i> Time tradicional, sem IA</button>
+          <button type="button" class="c-option" data-value="Já gastei com IA e não vi retorno"><i>IV.</i> Já gastei com IA e não vi retorno</button>
         </div>
         <input type="hidden" id="f-momento" name="momento" required />
       </section>
@@ -115,7 +112,7 @@
       <section class="c-step" data-step="5">
         <span class="c-num">05 <i>/</i> 06</span>
         <h2 class="c-title">Qual investimento mensal está <em>contemplado</em>?</h2>
-        <p class="c-sub c-sub--tight">Ajuda a indicar a intensidade certa. Os valores são apresentados na conversa.</p>
+        <p class="c-sub c-sub--tight">Ajuda a desenhar o primeiro passo certo. Os valores são apresentados na conversa.</p>
         <div class="c-options" role="radiogroup" aria-label="Investimento">
           <button type="button" class="c-option" data-value="Até R$ 6 mil por mês"><i>I.</i> Até R$ 6 mil por mês</button>
           <button type="button" class="c-option" data-value="R$ 6 a 15 mil por mês"><i>II.</i> R$ 6 a 15 mil por mês</button>
@@ -164,7 +161,6 @@
       <button type="button" class="c-prev" id="prev-btn" aria-label="Voltar pergunta" hidden>←</button>
     </form>
   </main>
-
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script defer src="consulta.js"></script>
 </body>
